@@ -15,7 +15,11 @@ public class WhenLoginAsClient {
 	private static String username;
 	private static String password;
 	
-	@Managed(driver="chrome", uniqueSession=true)
+	private static final String FIREFOX = "firefox";
+	private static final String CHROME = "chrome";
+	private static final String DRIVER = CHROME;
+	
+	@Managed(driver=DRIVER, uniqueSession=true)
 	WebDriver webDriver;
 	
 	@Steps
@@ -28,7 +32,13 @@ public class WhenLoginAsClient {
 	}
 	
 	public static void setUpWebDriver() {
-		System.setProperty( "webdriver.chrome.driver" , "/home/david/Programacion/Web/chromedriver/chromedriver" );
+		
+		if( DRIVER.equals( FIREFOX ) ) {
+			System.setProperty( "webdriver.firefox.bin" , "/home/david/firefox/firefox" );
+		}
+		else {			
+			System.setProperty( "webdriver.chrome.driver" , "/home/david/Programacion/Web/chromedriver/chromedriver" );	
+		}
 	}
 	
 	private static void setUpUsernameCredentials() {
