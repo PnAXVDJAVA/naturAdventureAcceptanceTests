@@ -1,0 +1,24 @@
+<acceptance-test-run title="Should see my username at the navbar" name="should_see_my_username_at_the_navbar" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="10845" timestamp="2015-10-03T13:33:15.175+02:00">
+  <user-story id="clientLogin.WhenLoginAsClient" name="When login as client" path="clientLogin"/>
+  <tags>
+    <tag name="When login as client" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="6712">
+    <screenshots>
+      <screenshot image="93543bf8e6a95c80a89ab7d2ff8384d7_NONE.png"/>
+    </screenshots>
+    <description>Opens naturadventure login page</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="2728">
+    <screenshots>
+      <screenshot image="e55752caf558ee7d49962709d2aac87c_NONE.png"/>
+    </screenshots>
+    <description>Logs as client with credentials: &lt;span class=&apos;step-parameter&apos;&gt;david, 12345&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1327">
+    <screenshots>
+      <screenshot image="e55752caf558ee7d49962709d2aac87c_NONE.png"/>
+    </screenshots>
+    <description>Should see at the navbar his username: &lt;span class=&apos;step-parameter&apos;&gt;david&lt;/span&gt;</description>
+  </test-step>
+</acceptance-test-run>

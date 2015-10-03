@@ -17,7 +17,7 @@ public class WhenLoginAsClient {
 	
 	private static final String FIREFOX = "firefox";
 	private static final String CHROME = "chrome";
-	private static final String DRIVER = CHROME;
+	private static final String DRIVER = FIREFOX;
 	
 	@Managed(driver=DRIVER, uniqueSession=true)
 	WebDriver webDriver;
@@ -56,6 +56,5 @@ public class WhenLoginAsClient {
 		//THEN
 		client.should_see_at_the_navbar_his_username( username );
 	}
-	
 
 }
